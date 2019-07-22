@@ -42,13 +42,150 @@
           transform: rotate(-45deg) translate(6px, -5px);
 }
 
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+}
+
+.menu.show {
+  visibility: visible;
+}
+
+.menu-branding, .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+  list-style: none;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-nav {
+  margin: 0;
+  padding: 0;
+  background: #000206;
+  opacity: 0.4;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-nav.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav .nav-item {
+  -webkit-transform: translate3d(600px, 0, 0);
+          transform: translate3d(600px, 0, 0);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-nav .nav-item.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-nav .nav-item.current > a {
+  color: #4b9892;
+}
+
+.menu-nav .nav-link {
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 1rem 0;
+  font-weight: 300;
+  color: #fff;
+  z-index: 10;
+  text-decoration: none;
+  margin-top: 4px;
+  padding-bottom: 0.4rem;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-nav .nav-link:hover {
+  color: #4b9892;
+  border-bottom: 10px #4b9892 solid;
+}
+
+.menu-branding {
+  background: #4b9892;
+  -webkit-transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  opacity: 0.9;
+}
+
+.menu-branding.show {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.menu-branding .portrait {
+  width: 250px;
+  height: 250px;
+  background: url("../media/174-1747230_eiffel-tower-png-eiffel-tower-png-icon-clipart.png");
+  border-radius: 50%;
+  opacity: 0.4;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-branding .portrait:hover {
+  opacity: 1;
+  -webkit-box-shadow: 2px 2px 50px 23px rgba(255, 255, 255, 0.4);
+          box-shadow: 2px 2px 50px 23px rgba(255, 255, 255, 0.4);
+}
+
+.nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.8s;
+          transition-delay: 0.8s;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  background: #262626;
+  background: #041635;
   color: white;
   height: 100%;
   margin: 0;
@@ -70,7 +207,7 @@ body#bg-img:after {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background: rgba(38, 38, 38, 0.6);
+  background: rgba(4, 22, 53, 0.2);
 }
 
 h1,
@@ -89,9 +226,20 @@ h3.lg-heading {
 h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
-  margin-bottom: 2rem;
+  margin-bottom: 0.2rem;
   padding: 0.2rem 1rem;
-  background: rgba(48, 48, 48, 0.2);
+  background: rgba(5, 30, 72, 0.6);
+  width: 40vw;
+}
+
+h1.sm-sub-heading,
+h2.sm-sub-heading,
+h3.sm-sub-heading {
+  margin-bottom: 1rem;
+  padding: 0.4rem 1rem;
+  text-align: justify;
+  background: rgba(5, 30, 72, 0.6);
+  width: 40vw;
 }
 
 a {
@@ -133,6 +281,6 @@ main#home {
 }
 
 main#home h1 {
-  margin-top: 20vh;
+  margin-top: 10vh;
 }
 /*# sourceMappingURL=main.css.map */
