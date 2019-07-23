@@ -80,7 +80,7 @@
         margin: 0;
         padding: 0;
         background: darken($primary-color, 10);
-        opacity: 0.4;
+        opacity: 0.9;
         transform: translate3d(0, -100%, 0);
         @include easeOut;
         &.show {
@@ -107,16 +107,15 @@
           font-size: 30px;
           text-transform: uppercase; 
           padding: 1rem 0;
-          font-weight: 300;
+          font-weight: 500;
           color: #fff;
-          z-index: 10;
+         
           text-decoration: none;
           margin-top: 4px;
           padding-bottom: 0.4rem;
           @include easeOut;
           &:hover {
               color: $secondary-color;
-              border-bottom: 10px $secondary-color solid;
           }
 
         }
